@@ -104,20 +104,19 @@ elif app_mode =='Prediction':
         prediction = loaded_model.predict(single_sample)
         if prediction[0] == 0 :
             st.error(
-                'According to our Calculations, you will not get the loan from Bank'
-                )
+    'According to our Calculations, you will not get the loan from Bank'
+    )
             st.markdown(
-                f'<img src="data:image/gif;base64,{data_url_no}" alt="cat gif">',
-                unsafe_allow_html=True,
-                )
+    f'<img src="data:image/gif;base64,{data_url_no}" alt="cat gif">',
+    unsafe_allow_html=True,)
         elif prediction[0] == 1 :
             st.success(
-                'Congratulations!! you will get the loan from Bank'
-                )
+    'Congratulations!! you will get the loan from Bank'
+    )
             st.markdown(
-                f'<img src="data:image/gif;base64,{data_url}" alt="cat gif">',
-                unsafe_allow_html=True,
-                )
+    f'<img src="data:image/gif;base64,{data_url}" alt="cat gif">',
+    unsafe_allow_html=True,
+    )
 
 
 
