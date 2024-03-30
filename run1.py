@@ -6,7 +6,7 @@ import base64
 
 
 
-@st.cache_data
+@st.cache(suppress_st_warning=True)
 def get_fvalue(val):
     feature_dict = {"No":1,"Yes":2}
     for key,value in feature_dict.items():
